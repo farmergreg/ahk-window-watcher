@@ -1,6 +1,10 @@
 ;
 ; Window Watcher By Greg Dietsche - 5/12/2015
 ;
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+;#Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Format of the file is one line per window to watch for:
 ; {Window Title To Watch For}{Tab}{AHK Keystrokes to send}
