@@ -19,16 +19,16 @@ Loop {
 }
 
 WindowWatcher:
-SetTimer, WindowWatcher, Off
 For i, val in g_WatchList {
 	StringSplit, temp, val, %A_Tab%
 	IfWinActive, %temp1%
 	{
+		SetTimer, WindowWatcher, Off
 		Send,%temp2%
 		WinWaitClose,,,60
+		SetTimer,WindowWatcher,1000
 	}
 }
-SetTimer,WindowWatcher,1000
 return
 
 ReloadWatchList() {
